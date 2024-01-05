@@ -1,5 +1,5 @@
 # Websocket端口转发
-动机：为了处理mac端没有缺少相应打印组件，将mac端请求ws://localhost:13888转发到windows端的ws://localhost:13888来实现流量转发。从而实现打印的目的。
+动机：为了处理mac端没有/缺少相应打印组件，将mac端请求ws://localhost:13888转发到windows端的ws://localhost:13888来实现流量转发。从而实现打印的目的。
 
 docker build
 ```
