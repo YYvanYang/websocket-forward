@@ -5,6 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - LISTEN_PORT1
+        - WS_BACKEND1
+        - LISTEN_PORT2
+        - WS_BACKEND2
     ports:
       - "${LISTEN_PORT1}:${LISTEN_PORT1}"
       - "${LISTEN_PORT2}:${LISTEN_PORT2}"

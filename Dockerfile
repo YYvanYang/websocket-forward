@@ -7,6 +7,11 @@ RUN apk add --no-cache gettext
 # 复制自定义配置文件到构建环境
 COPY nginx/conf.d/ /etc/nginx/templates/
 
+ARG LISTEN_PORT1
+ARG WS_BACKEND1
+ARG LISTEN_PORT2
+ARG WS_BACKEND2
+
 # 使用 envsubst 处理 Nginx 配置模板
 RUN envsubst '\$LISTEN_PORT1 \$WS_BACKEND1 \$LISTEN_PORT2 \$WS_BACKEND2' < /etc/nginx/templates/default.conf > /etc/nginx/conf.d/default.conf
 
